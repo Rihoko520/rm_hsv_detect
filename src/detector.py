@@ -180,7 +180,7 @@ def destroy():
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    img = cv2.imread('./1.jpg')
+    img = cv2.imread('./photo/1.jpg')
     armors_dict = detect_armor(img)
     print(armors_dict)
     destroy()
