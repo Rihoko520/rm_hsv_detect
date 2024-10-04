@@ -166,7 +166,7 @@ def track_armor(img, img_raw, rotated_rects, angle_tol=15, height_tol=100, width
 
     return armors_dict
 
-def detect_armor(img, val=33, gamma=7.5, color=(0, 0, 0)):
+def detect_armor(img, val=5, gamma=50.0, color=(0, 0, 0)):
     """检测装甲并返回结果字典。"""
     img_binary, resized_img, img_blur = img_processed(img, val, gamma)
     rotated_rects = find_light(color, img_binary, resized_img)

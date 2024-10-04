@@ -2,7 +2,7 @@ import cv2
 import numpy as np  
 
 # 读取图像并调整大小  
-image = cv2.imread('detector/2.jpg')  
+image = cv2.imread('./photo/2.jpg')  
 image = cv2.resize(image, (640, 480))  
 
 # 初始化HSV范围  

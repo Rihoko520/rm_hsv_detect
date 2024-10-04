@@ -21,7 +21,7 @@ def apply_changes():
     _, binary_image = cv2.threshold(gray_image, threshold_value, 255, cv2.THRESH_BINARY)
     cv2.imshow('Binary Image', binary_image)
 
-image = cv2.imread('./photo/1.jpg')
+image = cv2.imread('./photo/2.jpg')
 
 if image is not None:
     image = cv2.resize(image, (640, 480))
