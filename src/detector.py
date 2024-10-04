@@ -74,13 +74,13 @@ def find_light(color, img_binary, img):
 
     return filtered_rotated_rects
 
-def armortype(img_raw, rotated_rect):
+def armortype(img_blur, rotated_rect):
     """判断装甲类型并返回相应的类 ID。"""
     try:
         points = np.int0(cv2.boxPoints(rotated_rect))
-        mask = np.zeros_like(img_raw[:, :, 0], dtype=np.uint8)
+        mask = np.zeros_like(img_blur[:, :, 0], dtype=np.uint8)
         cv2.fillConvexPoly(mask, points, 255)
-        roi = cv2.bitwise_and(img_raw, img_raw, mask=mask)
+        roi = cv2.bitwise_and(img_blur, img_blur, mask=mask)
         x, y, w, h = cv2.boundingRect(points)
         roi = roi[y:y + h, x:x + w]
 
@@ -120,7 +120,7 @@ def armortype(img_raw, rotated_rect):
     except Exception:
         return -1
 
-def track_armor(img, img_raw, rotated_rects, angle_tol=15, height_tol=100, width_tol=100, cy_tol=100):
+def track_armor(img, img_blur, rotated_rects, angle_tol=15, height_tol=100, width_tol=100, cy_tol=100):
     """跟踪装甲并返回装甲字典。"""
     rects_copy = rotated_rects[:]
     all_groups = []
@@ -151,7 +151,7 @@ def track_armor(img, img_raw, rotated_rects, angle_tol=15, height_tol=100, width
     for armor_rect in armor_rects:
         center, (width, height), angle = armor_rect
         box = cv2.boxPoints(((center[0], center[1]), (width, height), angle)).astype(int)
-        color_result = armortype(img_raw, armor_rect)
+        color_result = armortype(img_blur, armor_rect)
         class_id = 1 if color_result == 1 else 7 if color_result == 0 else None
         
         if class_id is not None:
