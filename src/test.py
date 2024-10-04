@@ -7,7 +7,7 @@ def adjust_rotated_rect(rect):
     c, (w, h), angle = rect
     if w > h:
         w, h = h, w
-        angle = (angle + 90) % 360
+        angle = (angle + 90) % 360#
         if angle > 180:
             angle -= 360
         elif angle > 90:
@@ -180,7 +180,7 @@ def destroy():
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    img = cv2.imread('detector/1.png')
+    img = cv2.imread('rm_detector/1.png')
     armors_dict = detect_armor(img)
     print(armors_dict)
     destroy()
