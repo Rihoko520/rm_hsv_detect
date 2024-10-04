@@ -156,7 +156,7 @@ img = cv2.imread('path/to/your/image.jpg')
   - **生成装甲字典**: 包含每个装甲的类 ID、高度和中心坐标，并在图像上绘制检测结果。
 
 ![Armor](photo/armor.jpg) 
-4. 返回结果返回包含检测到的装甲信息的字典：
+### 4. 返回结果返回包含检测到的装甲信息的字典：
 
 ```bash
 {'320': {'class_id': 7, 'height': 106, 'center': [320, 261]}}
