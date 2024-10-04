@@ -47,7 +47,7 @@ def project_polygon(polygon, axis):
     return min(projections), max(projections)
 
 def img_processed(img, val, gamma):
-    """处理图像，返回二值图像、调整大小的图像和浮点图像。"""
+    """处理图像，返回二值图像、调整大小的图像和浮点图像。"""    
     resized_img = cv2.resize(img, (640, 480))
     img_float = img_as_float(resized_img)
     img_float = (exposure.adjust_gamma(img_float, gamma) * 255).astype(np.uint8)
@@ -180,7 +180,7 @@ def destroy():
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    img = cv2.imread('rm_detector/1.jpg')
+    img = cv2.imread('./1.jpg')
     armors_dict = detect_armor(img)
     print(armors_dict)
     destroy()
