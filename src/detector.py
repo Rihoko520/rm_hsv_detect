@@ -168,7 +168,7 @@ def track_armor(img, img_blur, rotated_rects, angle_tol=15, height_tol=100, widt
 
     return armors_dict
 
-def detect_armor(img, val=5, gamma=50.0, color=(0, 0, 0)):
+def detect_armor(img, val=6, gamma=6.94, color=(0, 0, 0)):
     """检测装甲并返回结果字典。"""
     img_binary, resized_img, img_blur = img_processed(img, val, gamma)
     rotated_rects = find_light(color, img_binary, resized_img)
@@ -182,7 +182,7 @@ def destroy():
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    img = cv2.imread('./photo/1.png')
+    img = cv2.imread('./photo/4.png')
     armors_dict = detect_armor(img)
     print(armors_dict)
     destroy()
