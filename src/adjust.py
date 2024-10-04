@@ -4,7 +4,7 @@ from skimage import exposure
 # 全局变量
 gamma = 0.7
 threshold_value = 128
-mode = 1  # 0 for image, 1 for video stream
+mode = 0  # 0 for image, 1 for video stream
 path = './photo/2.jpg'
 url='http://192.168.3.195:4747/video/'
 def update_threshold(val):

@@ -150,6 +150,8 @@ def track_armor(img, img_blur, rotated_rects, angle_tol=15, height_tol=100, widt
     armors_dict = {}
     for armor_rect in armor_rects:
         center, (width, height), angle = armor_rect
+        max_size = max(width, height)        # 将 width 和 height 进行比较，赋值为较大的值
+        width = height = max_size        
         box = cv2.boxPoints(((center[0], center[1]), (width, height), angle)).astype(int)
         color_result = armortype(img_blur, armor_rect)
         class_id = 1 if color_result == 1 else 7 if color_result == 0 else None
@@ -180,7 +182,7 @@ def destroy():
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    img = cv2.imread('./photo/1.jpg')
+    img = cv2.imread('./photo/1.png')
     armors_dict = detect_armor(img)
     print(armors_dict)
     destroy()
