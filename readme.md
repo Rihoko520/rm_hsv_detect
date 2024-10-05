@@ -4,7 +4,7 @@
 
 ## 使用传统视觉识别装甲板
 ---
-[关于opencv](tutorial.md/）
+[关于opencv](tutorial.md）
 ---
 
 ## 运行代码的准备工作
