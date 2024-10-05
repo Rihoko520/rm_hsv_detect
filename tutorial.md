@@ -296,7 +296,5 @@ cv2.imwrite('path/to/save/image.jpg', image)  # 使用 imwrite() 函数将图像
 
 ---
 
-## 总结
 
-OpenCV 是一个强大的计算机视觉库，支持多种图像处理功能。通过本教程，您可以学习到如何安装 OpenCV 以及执行一些基本的图像处理操作。欲了解更多信息，请访问 [OpenCV 官方文档](https://docs.opencv.org/)。
 
