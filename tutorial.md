@@ -35,10 +35,12 @@ OpenCV（Open Source Computer Vision Library）是一个开源计算机视觉和
 
 - **《狂野飙车》（Asphalt）**
    - 自动驾驶脚本可帮助玩家提高效率。
+   
    ![AUTO_DRIVE](photo/asphalt.jpg)
 
 - **《GTA V》**
    - 通过脚本实现自动驾驶、人物动作监控等功能。
+   
    [GTAV_AUTO_DRIVE](https://github.com/Sanduoo/GTA5-AUTO-DRIVE)
 ---
 
@@ -51,42 +53,23 @@ OpenCV（Open Source Computer Vision Library）是一个开源计算机视觉和
 你可以通过以下链接访问 OpenCV 的官方文档：
 
 - [OpenCV 官方文档](https://docs.opencv.org/)
+- [OpenCV 官方文档中文版](https://opencv-python-tutroals.readthedocs.io/en/latest/)
+- [OpenCV 官方文档中文版](https://www.woshicver.com/)
 
 ### 2. 使用文档目录
 
 在官方文档首页，你会看到一个清晰的目录，列出了不同模块和功能。你可以根据自己的需求点击相应的链接，快速找到需要学习的内容。
 
-- 访问目录页面：[OpenCV 文档目录](https://docs.opencv.org/master/index.html)
-
 ### 3. 查找特定功能
 
 如果你想查找特定的功能或方法，可以使用文档页面右上角的搜索框。输入关键字，比如“图像读取”、“边缘检测”等，可以快速定位到相关内容。
-
-- 使用搜索功能：[OpenCV 搜索](https://docs.opencv.org/master/index.html#search)
 
 ### 4. 学习示例代码
 
 官方文档中通常包含丰富的示例代码。你可以参考这些代码，了解如何使用不同的 OpenCV 功能。建议在自己的开发环境中运行这些示例，以加深理解。
 
-- 示例代码页面：[OpenCV 示例](https://docs.opencv.org/master/d9/df8/tutorial_root.html)
+- 示例代码页面：[OpenCV 示例](https://opencv.apachecn.org/4.0.0/2.1-tutorial_py_image_display/)
 
-### 5. 查看 API 参考
-
-OpenCV 提供了详细的 API 参考文档，你可以通过 API 文档了解每个函数的参数和返回值。这对于深入理解 OpenCV 的工作原理非常有帮助。
-
-- API 文档页面：[OpenCV API 参考](https://docs.opencv.org/master/d9/df8/tutorial_root.html)
-
-### 6. 参与社区讨论
-
-在学习过程中，如果你遇到问题，可以访问 OpenCV 的社区论坛或相关的讨论组。通过与其他开发者交流，你可以获得更多的学习资源和解决方案。
-
-- 访问社区论坛：[OpenCV 论坛](https://forum.opencv.org/)
-
-### 7. 定期回顾和实践
-
-学习 OpenCV 需要时间和实践。定期回顾官方文档中的内容，并尝试编写自己的代码，将理论与实践结合起来，能够帮助你更好地掌握图像处理技术。
-
-- 复习学习材料：[OpenCV 教程列表](https://docs.opencv.org/master/d9/df8/tutorial_root.html)
 
 ---
 
