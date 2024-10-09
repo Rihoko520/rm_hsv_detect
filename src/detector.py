@@ -97,7 +97,7 @@ def track_armor(img, img_float, rotated_rects, angle_tol=5, height_tol=50, width
             merged_rect = cv2.minAreaRect(points)  # 计算最小外接矩形
 
             # 检查合并后的矩形是否符合条件
-            if 2000 <= merged_rect[1][0] * merged_rect[1][1] <= 10000 and 0 <= merged_rect[1][0] / merged_rect[1][1] <= 4:
+            if 2000 <= merged_rect[1][0] * merged_rect[1][1] <= 10000 and 0 <= merged_rect[1][0] / merged_rect[1][1] <= 4: #2000 <= merged_rect[1][0] * merged_rect[1][1] <= 10000 and 0 <= merged_rect[1][0] / merged_rect[1][1] <= 4:
                 armor_rects.append(adjust_rotated_rect(merged_rect))  # 调整并添加到装甲矩形列表
 
     armors_dict = {}  # 存储装甲信息的字典
@@ -133,7 +133,7 @@ def armortype(img_float, rotated_rect):
         hsv = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)
         color_ranges = {
             'red': (np.array([0, 43, 46]), np.array([10, 255, 255])),
-            'red_upper': (np.array([160, 100, 100]), np.array([180, 255, 255])),
+            'red_upper': (np.array([146, 100, 100]), np.array([180, 255, 255])), # 'red_upper': (np.array([160, 100, 100]), np.array([180, 255, 255]))
             'blue': (np.array([100, 100, 100]), np.array([140, 255, 255])),
             'black': (np.array([0, 0, 0]), np.array([180, 255, 50]))
         }

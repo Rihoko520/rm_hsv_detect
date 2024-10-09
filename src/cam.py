@@ -4,9 +4,9 @@ import adjust  # 导入调试代码
 
 # 设置模式：0 - 调整参数（包括 HSV），1 - 目标检测（仅 gamma 和阈值），2 - 处理静态图像，3 - 静态图像调节并实时检测
 global mode 
-mode = 3  # 将此值改为 0 以进行参数调整，1 进行目标检测，2 进行静态图像处理，3 进行静态图像调节并实时检测
+mode = 3 # 将此值改为 0 以进行参数调整，1 进行目标检测，2 进行静态图像处理，3 进行静态图像调节并实时检测
 global image_path   
-image_path = './photo/3.jpg' # 替换为你的图像路径
+image_path = './photo/combine.png' # 替换为你的图像路径
 
 def main():
     if mode == 0:
